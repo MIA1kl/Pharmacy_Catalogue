@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+     <title>Section for Developer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+</head>
+<body>
+    <header th:insert="blocks/header :: header"></header>
+
+    <div class="container mt-5">
+        <a href="/dev-section/add">Add new product</a>
+        <h1>List of medications</h1>
+        <div th:each="el : ${posts}" class="alert alert-info mt-2">
+            <img th:src="${el.imagesrc}" width="150" height="150"/>
+            <h3 th:text="${el.title}"/>
+<!--            <p th:text="${el.description}"/>-->
+            <p> <b>Price:</b> <span th:text="${el.price}"/> $</p>
+
+
+            <a th:href="'/dev-section/'+${el.id}" class="btn btn-warning">See more...</a>
+        </div>
+    </div>
+
+    <div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>
