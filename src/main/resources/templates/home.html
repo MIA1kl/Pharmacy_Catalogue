@@ -5,28 +5,27 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    <link rel="stylesheet" href="homestyles.css">
 </head>
 <body>
     <header th:insert="blocks/header :: header"></header>
-    <main class="container">
-    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-        <div class="col-md-6 px-0">
-            <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-            <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
-        </div>
-    </div>
+
+    <main class="img-container">
+        <img src="https://image.freepik.com/free-vector/pharmacy-medication-concept-online-drugstore-consultation-and-pills-prescription-people-illustration_169479-293.jpg" alt="">
     </main>
 
-    <div class="container mt-5">
-        <div th:each="el : ${posts}" class="alert alert-info mt-2">
-            <img th:src="${el.imagesrc}" width="150" height="150"/>
-            <h3 th:text="${el.title}"/>
-            <!--            <p th:text="${el.description}"/>-->
-            <p> <b>Price:</b> <span th:text="${el.price}"/> $</p>
-
-
-            <a th:href="'/home-details/'+${el.id}" class="btn btn-warning">See more...</a>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div th:each="el : ${posts}" class="alert alert-info mt-2">
+                    <div class="col">
+                        <img th:src="${el.imagesrc}" class="bd-placeholder-img card-img-top" />
+                        <h3 th:text="${el.title}"/>
+                        <p> <b>Price:</b> <span th:text="${el.price}"/> $</p>
+                        <a th:href="'/home-details/'+${el.id}" class="btn btn-info">See more...</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

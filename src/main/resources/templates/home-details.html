@@ -5,17 +5,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    <link rel="stylesheet" href="homestyles.css">
 </head>
 <body>
 <header th:insert="blocks/header :: header"></header>
 
-<div class="container mt-5">
-    <div th:each="el : ${post}" class="alert alert-info mt-2">
-        <img th:src="${el.imagesrc}" width="150" height="150"/>
-        <h3 th:text="${el.title}"/>
-        <p th:text="${el.description}"/>
-        <p> <b>Price:</b> <span th:text="${el.price}"/> $</p>
+<div class="album py-5 bg-light">
+    <div class="container">
 
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                    <div th:each="el : ${post}" class="alert alert-info mt-2">
+                        <img th:src="${el.imagesrc}" class="bd-placeholder-img card-img-top"  height=100%/>
+                        <h3 th:text="${el.title}"/>
+                        <p th:text="${el.description}"/>
+                        <p> <b>Price:</b> <span th:text="${el.price}"/> $</p>
+
+                    </div>
+            </div>
+        </div>
     </div>
 </div>
 
