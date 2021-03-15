@@ -1,0 +1,8 @@
+.img-container{
+    text-align: center;
+}
+.card-img-top{
+    height: 70%;
+}
+
+.card {display:inline-block;}
