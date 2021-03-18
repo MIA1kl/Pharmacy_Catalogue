@@ -12,7 +12,7 @@
 <header th:insert="blocks/header :: header"></header>
 
 <div class="container mt-5">
-    <a href="/dev-section/add" class="btn btn-info">Add new product</a>
+    <a href="/dev-section/add" class="btn btn-info"> + Add new product</a>
     <h1>List of medications</h1>
 </div>
 
@@ -21,7 +21,6 @@
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
-                <div class="card shadow-sm">
                     <div th:each="el : ${post}" class="alert alert-info mt-2">
                         <img th:src="${el.imagesrc}" class="bd-placeholder-img card-img-top"  height=100%/>
                         <h3 th:text="${el.title}"/>
@@ -34,7 +33,6 @@
                         </form>
 
                     </div>
-                </div>
             </div>
         </div>
     </div>
