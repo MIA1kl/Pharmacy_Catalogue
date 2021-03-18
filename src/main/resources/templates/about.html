@@ -7,11 +7,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
 </head>
 <body>
-<header th:insert="blocks/header :: header"></header>
+    <header th:insert="blocks/header :: header"></header>
+<p><h5>The midterm's project about page</h5></p>
+<p><h1>API description is here:</h1></p>
 
-<div class="container mt-5">
-    <h1 th:text="${title}" />
-</div>
+<ul>
+    <li>To view all products from database: <b>/</b> </li>
+    <li>To view one separated product from database: <b>/home-details/{id}</b> </li>
+    <li>To see the page for developer, where you can manipulate with data: <b>/dev-section</b></li>
+    <li>To add new product by using POST request: <b>/dev-section/add</b> </li>
+    <li>To view one separated product from database for developer with opportunity edit and delete: <b>/dev-section/{id}</b> </li>
+    <li>To edit one separated product by using POST request: <b>/dev-section/{id}/edit</b> </li>
+    <li>To delete one separated product by using POST request: <b>/dev-section/{id}/delete</b> </li>
+</ul>
 
 <div th:insert="blocks/footer :: footer"></div>
 </body>
