@@ -1,7 +1,7 @@
 # Pharmacy_Catalogue
 
 
-<img src="https://upload.wikimedia.org/wikipedia/en/0/07/Ala-Too_International_University_Seal.png" width="20%" /> <img 
+<img src="https://upload.wikimedia.org/wikipedia/en/0/07/Ala-Too_International_University_Seal.png" width="20%" />
 
 ## Author: Natalia Klimareva COM19-A
 
