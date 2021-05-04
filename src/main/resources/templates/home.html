@@ -10,26 +10,37 @@
 
 </head>
 <body>
-    <header th:insert="blocks/header :: header"></header>
+<header th:insert="blocks/header :: header"></header>
 
-    <p style="text-align:center;"><img src="https://image.freepik.com/free-vector/pharmacy-medication-concept-online-drugstore-consultation-and-pills-prescription-people-illustration_169479-293.jpg" alt="Logo"></p>
+<!--    <main class="img-container">-->
+<!--        <img src="https://image.freepik.com/free-vector/pharmacy-medication-concept-online-drugstore-consultation-and-pills-prescription-people-illustration_169479-293.jpg" alt="">-->
+<!--    </main>-->
 
-
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div th:each="el : ${posts}" class="alert alert-info mt-2">
-                    <div class="col">
-                        <img th:src="${el.imagesrc}" class="bd-placeholder-img card-img-top" />
-                        <h3 th:text="${el.title}"/>
-                        <p> <b>Price:</b> <span th:text="${el.price}"/> $</p>
-                        <a th:href="'/home-details/'+${el.id}" class="btn btn-info">See more...</a>
-                    </div>
+<div class="container ">
+    <div class="row pt-5 ">
+        <div class="col-sm-12 mb-3 mt-5">
+            <form th:action="@{/}" method="get" class="d-flex">
+                <input class="form-control me-2" type="text" name="keyword" placeholder="Search" aria-label="Search">
+                <button class="btn btn-info" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="card-deck mt-3">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-col-lg-5 ">
+            <div th:each="el : ${posts}" class="alert">
+                <div class="col ">
+                    <img th:src="${el.imagesrc}" class="bd-placeholder-img card-img-top" />
+                    <h3 th:text="${el.title}"/>
+                    <p> <b>Price:</b> <span th:text="${el.price}"/> $</p>
+                    <a th:href="'/home-details/'+${el.id}" class="btn btn-info">See more...</a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div th:insert="blocks/footer :: footer"></div>
+<div th:insert="blocks/footer :: footer"></div>
 </body>
 </html>
