@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Home page</title>
+    <title>Home page - Filtered</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
@@ -19,28 +19,48 @@
 <div class="container ">
     <div class="row pt-5 ">
         <div class="col-sm-12 mb-3 mt-5">
-            <form th:action="@{/}" method="get" class="d-flex">
-                <input class="form-control me-2" type="text" name="keyword" placeholder="Search" aria-label="Search">
-                <button class="btn btn-info" type="submit">Search</button>
-            </form>
+            <input class="form-control me-2" id="txtSearch" onkeyup="myFunction()"  type="text" name="keyword" placeholder="Search" aria-label="Search">
         </div>
     </div>
 </div>
 <div class="container">
-    <div class="card-deck mt-3">
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-col-lg-5 ">
-            <div th:each="el : ${posts}" class="alert">
-                <div class="col ">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-col-lg-5 " id="myItems">
+        <div th:each="el : ${posts}" class="card">
+            <div class="col ">
+                <div class="card-body">
                     <img th:src="${el.imagesrc}" class="bd-placeholder-img card-img-top" />
-                    <h3 th:text="${el.title}"/>
+
+                    <h3 th:text="${el.title}" class="card-title"/>
                     <p> <b>Price:</b> <span th:text="${el.price}"/> $</p>
                     <a th:href="'/home-details/'+${el.id}" class="btn btn-info">See more...</a>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 
 <div th:insert="blocks/footer :: footer"></div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+<script>
+    function myFunction() {
+        var input, filter, cards, cardContainer, h5, title, i;
+        input = document.getElementById("txtSearch");
+        filter = input.value.toUpperCase();
+        cardContainer = document.getElementById("myItems");
+        cards = cardContainer.getElementsByClassName("card");
+        for (i = 0; i < cards.length; i++) {
+            title = cards[i].querySelector(".card-body h3.card-title");
+            if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
