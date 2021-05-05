@@ -5,7 +5,17 @@
 
 ## Author: Natalia Klimareva and Fatima Bekmamatova COM19-A
 
-[Click here](https://ph-catalogue-cs204.herokuapp.com) to see the project on Heroku
+Pharmacy catalogs are used so that the customer can find out the availability of the desired product and its price without leaving the house.
+
+This is the .gif of the website, but also you can visit the site by yourself: [Click here](https://ph-catalogue-cs204.herokuapp.com) to see the project on Heroku
+
+![Alt Text](https://github.com/Fattijenishbek/extra_files/blob/master/ezgif.com-gif-maker%20(1).gif)
+
+This is the how we implemented the search code:
+
+![Screenshot from 2021-05-06 02-37-44](https://user-images.githubusercontent.com/57977808/117206056-31062f80-ae14-11eb-9df3-49dc04dc1922.png)
+
+<img src="https://github.com/MIA1kl/Pharmacy_Catalogue/blob/master/images/2021-03-19_01-45-02.png" /> 
 
 ## API Description:
 
@@ -16,9 +26,3 @@
 * To view one separated product from database for developer with opportunity edit and delete: **/dev-section/{id}**
 * To edit one separated product by using POST request: **/dev-section/{id}/edit**
 * To delete one separated product by using POST request: **/dev-section/{id}/delete**
-
-Pharmacy catalogs are used so that the customer can find out the availability of the desired product and its price without leaving the house.
-
-![Alt Text](https://github.com/Fattijenishbek/extra_files/blob/master/ezgif.com-gif-maker%20(1).gif)
-
-<img src="https://github.com/MIA1kl/Pharmacy_Catalogue/blob/master/images/2021-03-19_01-45-02.png" /> 
