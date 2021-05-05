@@ -15,6 +15,8 @@ This is the how we implemented the search code:
 
 ![Screenshot from 2021-05-06 02-37-44](https://user-images.githubusercontent.com/57977808/117206056-31062f80-ae14-11eb-9df3-49dc04dc1922.png)
 
+If you try to access not existing address, following "Not Found" page appears
+
 <img src="https://github.com/MIA1kl/Pharmacy_Catalogue/blob/master/images/2021-03-19_01-45-02.png" /> 
 
 ## API Description:
