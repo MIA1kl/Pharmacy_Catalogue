@@ -3,7 +3,7 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/en/0/07/Ala-Too_International_University_Seal.png" width="20%" />
 
-## Author: Natalia Klimareva COM19-A
+## Author: Natalia Klimareva and Fatima Bekmamatova COM19-A
 
 [Click here](https://ph-catalogue-cs204.herokuapp.com) to see the project on Heroku
 
