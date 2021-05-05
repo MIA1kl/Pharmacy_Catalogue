@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
      <title>Section for Developer</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
     <link rel="stylesheet" href="homestyles.css">
@@ -10,11 +10,11 @@
 <body>
     <header th:insert="blocks/header :: header"></header>
 
-    <div class="container mt-5">
+    <div class="container py-5 mt-5">
         <a href="/dev-section/add" class="btn btn-info"> + Add new product</a>
         <h1>List of medications</h1>
     </div>
-    <div class="album py-5 bg-light">
+    <div class="album ">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div th:each="el : ${posts}" class="alert alert-info mt-2">
