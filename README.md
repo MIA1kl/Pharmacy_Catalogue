@@ -19,6 +19,5 @@
 
 Pharmacy catalogs are used so that the customer can find out the availability of the desired product and its price without leaving the house.
 
-"![Alt Text](https://github.com/Fattijenishbek/extra_files/blob/master/ezgif.com-gif-maker%20(1).gif)"
 
 <img src="https://github.com/MIA1kl/Pharmacy_Catalogue/blob/master/images/2021-03-19_01-45-02.png" /> 
